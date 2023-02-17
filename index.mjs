@@ -1,5 +1,5 @@
-import inquirer from "inquirer";
-import fs from "fs/promises";
+import inquirer from "inquirer"; //Importing inquirer
+import fs from "fs/promises"; // Importing FR 
 
 //The inquirer returns an object and we can use destructuring to access the object key and values//
 let {
@@ -11,7 +11,8 @@ let {
   projectLicense,
   projectContribution,
   projectTest,
-  projectQuestion
+  projectQuestionGithub,
+  projectQuestionEmail
 } = await inquirer.prompt([
   {
     type: "input",
@@ -44,7 +45,7 @@ let {
         name: "test",
       },
       {
-        name: "question",
+        name: "questions",
       },
     ],
   },
@@ -76,8 +77,22 @@ let {
   },
   {
     type: "input",
-    message: "Provide information on how to get support for your project",
-    name: "projectQuestion",
+    message: "What's your Github Username?",
+    name: "projectQuestionGithub",
+  },
+  {
+    type: 'input',
+    name: 'projectQuestionEmail',
+    message: 'What is your email address?',
+    validate: function (value) {//This function validates that the users input is an email address.
+      const pass = value.match(
+        /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ // email address regular expression
+      );
+      if (pass) {
+        return true;
+      }
+      return 'Please enter a valid email address';//This message is printed if a valid email is not provided.
+    },
   },
 ]);
 
@@ -106,23 +121,25 @@ let tableText = '';
 
 tableOfContents.forEach(element => {
   // t += '- '+ '#' + element;
+  console.log(element);
   tableText += `- [${element}](#${element})\n`
+  console.log(tableText);
 });
 
 
 //This variable is what we will use to create the README taking value taken from the keys in the response//
-let readMe = `# ${projectTitle}\n\n**License**\n\nThis application is covered under the ${projectLicense}\n\n${licenseBadge}\n\n## Table Contents\n\n${tableText}\n\n## Description\n\n${projectDescription}\n\n## Installation\n\n${projectInstallation}\n\n## Usage\n\n${projectUsage}\n\n## Contributing\n\n${projectContribution}\n\n## Tests\n\n${projectTest}\n\n## Questions\n\n${projectQuestion}`;
+let readMe = `# ${projectTitle}\n\n**License**\n\nThis application is covered under the ${projectLicense}\n\n${licenseBadge}\n\n## Table Contents\n\n${tableText}\n\n## Description\n\n${projectDescription}\n\n## Installation\n\n${projectInstallation}\n\n## Usage\n\n${projectUsage}\n\n## Contributing\n\n${projectContribution}\n\n## Tests\n\n${projectTest}\n\n## Questions\n\nGithub Username: ${projectQuestionGithub}. A direct link to my Github profile is available here [link](https://github.com/${projectQuestionGithub})\nMy email is ${projectQuestionEmail}, feel free to drop me an email with any questions you have :)
+`;
 
 //This function writes creates the "README.md" file using the contents from the readme variable
 await fs.writeFile("README.md", readMe);
 
 //   console.log("Project Title:", projectTitle);
 //   console.log("Project Description:", projectDescription);
-  console.log("Table Contents:", tableOfContents);
+  // console.log("Table Contents:", tableOfContents);
 
-const tableContent = {tableOfContents};
 
-console.log(tableContent);
+// console.log(tableContent);
 
 // tableOfContents.forEach(element => {
 //    let t = '- '+ '#' + element;

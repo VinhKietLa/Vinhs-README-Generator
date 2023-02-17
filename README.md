@@ -1,37 +1,42 @@
-# Music Beat Generator
+# Wheel of fortune
 
 **License**
 
-This application is covered under the Apache License 2.0
+This application is covered under the MIT License
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table Contents
 
 - [installation](#installation)
 - [usage](#usage)
+- [license](#license)
+- [contributing](#contributing)
+- [test](#test)
+- [questions](#questions)
 
 
 ## Description
 
-It takes user text inputs and creates a music beat
+The user can spin the wheel and the result will be the prize
 
 ## Installation
 
-lone the repo and run NPM vinhDiesel
+Run NPM Naruto
 
 ## Usage
 
-Use the search bar to input random words and then press generate. You will be provided with a music beat.
+Press the spin button and wait for the result prize
 
 ## Contributing
 
-Create a pull request
+You can create a PR
 
 ## Tests
 
-No tests =(
+There no tests
 
 ## Questions
 
-Email me
+Github Username: vinhkietla. A direct link to my Github profile is available here [link](https://github.com/vinhkietla)
+My email is kietla@live.co.uk, feel free to drop me an email with any questions you have :)
