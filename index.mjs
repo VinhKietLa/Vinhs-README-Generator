@@ -42,7 +42,7 @@ let {
         name: "contributing",
       },
       {
-        name: "test",
+        name: "tests",
       },
       {
         name: "questions",
@@ -53,11 +53,13 @@ let {
     type: "input",
     message: "Provide instructions on how to install and set up the project.",
     name: "projectInstallation",
+    when: (name) => name.tableOfContents.includes("installation"),//Using the WHEN condition that checks if the current section was selected in the previous checkbox prompt. It will skip if it doesnt find a match.
   },
   {
     type: "input",
     message: "Explain how to use the product",
     name: "projectUsage",
+    when: (name) => name.tableOfContents.includes("usage"),
   },
   {
     type: "list",
@@ -69,16 +71,19 @@ let {
     type: "input",
     message: "Explain how to contribute to the project",
     name: "projectContribution",
+    when: (name) => name.tableOfContents.includes("contributing"),
   },
   {
     type: "input",
     message: "Explain how to run any tests for the project",
     name: "projectTest",
+    when: (name) => name.tableOfContents.includes("tests"),
   },
   {
     type: "input",
     message: "What's your Github Username?",
     name: "projectQuestionGithub",
+    when: (name) => name.tableOfContents.includes("questions"),
   },
   {
     type: 'input',
@@ -121,9 +126,8 @@ let tableText = '';
 
 tableOfContents.forEach(element => {
   // t += '- '+ '#' + element;
-  console.log(element);
+  // console.log(element);
   tableText += `- [${element}](#${element})\n`
-  console.log(tableText);
 });
 
 
@@ -133,6 +137,8 @@ let readMe = `# ${projectTitle}\n\n**License**\n\nThis application is covered un
 
 //This function writes creates the "README.md" file using the contents from the readme variable
 await fs.writeFile("README.md", readMe);
+
+console.log('Thank you, the application has finished :)')
 
 //   console.log("Project Title:", projectTitle);
 //   console.log("Project Description:", projectDescription);

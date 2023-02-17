@@ -1,10 +1,4 @@
-# erte
-
-**License**
-
-This application is covered under the MIT License
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Vinhs-Pro-README-Generator
 
 ## Table Contents
 
@@ -12,17 +6,13 @@ This application is covered under the MIT License
 - [license](#license)
 - [contributing](#contributing)
 
-
 ## Description
 
-This project creates a README using NodeJS, Inquirer and FS to create a README using the inputs from the user. 
+ertert
 
 ## Installation
 
-To install the application you will need to:
-
-1. Clone the repository 
-2. 
+ertert
 
 ## Usage
 
