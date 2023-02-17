@@ -1,4 +1,4 @@
-# zh
+# Music Beat Generator
 
 **License**
 
@@ -10,32 +10,28 @@ This application is covered under the Apache License 2.0
 
 - [installation](#installation)
 - [usage](#usage)
-- [license](#license)
-- [contributing](#contributing)
-- [test](#test)
-- [question](#question)
 
 
 ## Description
 
-fg
+It takes user text inputs and creates a music beat
 
 ## Installation
 
-ret
+lone the repo and run NPM vinhDiesel
 
 ## Usage
 
-gfghgf
+Use the search bar to input random words and then press generate. You will be provided with a music beat.
 
 ## Contributing
 
-as
+Create a pull request
 
 ## Tests
 
-wer
+No tests =(
 
 ## Questions
 
-dsf
+Email me
