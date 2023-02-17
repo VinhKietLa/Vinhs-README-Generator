@@ -1,4 +1,4 @@
-# erte
+# lol
 
 **License**
 
@@ -9,28 +9,25 @@ This application is covered under the MIT License
 ## Table Contents
 
 - [installation](#installation)
+- [usage](#usage)
 - [license](#license)
-- [contributing](#contributing)
 
 
 ## Description
 
-This project creates a README using NodeJS, Inquirer and FS to create a README using the inputs from the user. 
+lol
 
 ## Installation
 
-To install the application you will need to:
-
-1. Clone the repository 
-2. 
+dfgdfg
 
 ## Usage
 
-undefined
+erger
 
 ## Contributing
 
-ertert
+undefined
 
 ## Tests
 
@@ -39,4 +36,4 @@ undefined
 ## Questions
 
 Github Username: undefined. A direct link to my Github profile is available here [link](https://github.com/undefined)
-My email is kietla@live.o.uk, feel free to drop me an email with any questions you have :)
+My email is e@live.com, feel free to drop me an email with any questions you have :)

@@ -1,32 +1,26 @@
 # Vinhs-Pro-README-Generator
 
-## Table Contents
-
-- [installation](#installation)
-- [license](#license)
-- [contributing](#contributing)
-
 ## Description
 
-ertert
+This project creates a README with NodeJS, Inquirer and FS using the inputs from the user. 
 
 ## Installation
 
-ertert
+To install the application you will need to:
 
-## Usage
+1. Clone the repository -> [Github respository](https://github.com/VinhKietLa/Vinhs-Pro-README-Generator)
+2. Install NodeJS v19.6.1 -> [NodeJs](https://nodejs.org/en/download/)
+3. Install Inquirier v19.6.0 -> [Inquirer](https://www.npmjs.com/package/inquirer)
+4. Use the command 'node index.mjs' to start the application.
 
-undefined
+## Preview of application
 
-## Contributing
+![screenshot of application](./assets/screenshot.png)
 
-ertert
+### Technologies used
 
-## Tests
+- NodeJS 
+- Javascript
+- Inquirer
+- FS Library
 
-undefined
-
-## Questions
-
-Github Username: undefined. A direct link to my Github profile is available here [link](https://github.com/undefined)
-My email is kietla@live.o.uk, feel free to drop me an email with any questions you have :)
