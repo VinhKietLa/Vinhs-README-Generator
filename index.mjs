@@ -29,22 +29,22 @@ let {
     name: "tableOfContents",
     choices: [
       {
-        name: "Installation",
+        name: "installation",
       },
       {
-        name: "Usage",
+        name: "usage",
       },
       {
-        name: "License",
+        name: "license",
       },
       {
-        name: "Contributing",
+        name: "contributing",
       },
       {
-        name: "Tests",
+        name: "test",
       },
       {
-        name: "Questions",
+        name: "question",
       },
     ],
   },
@@ -102,12 +102,29 @@ switch (projectLicense) {
     break;
 }
 
+let t;
+
+tableOfContents.forEach(element => {
+  // t += '- '+ '#' + element;
+  t += `[title](#${element})`
+});
+
+
 //This variable is what we will use to create the README taking value taken from the keys in the response//
-let readMe = `# ${projectTitle}\n\n**License**\n\nThis application is covered under the ${projectLicense}\n${licenseBadge}\n\n## Description\n\n${projectDescription}\n\n## Installation\n\n${projectInstallation}\n\n## Usage\n\n${projectUsage}\n\n## Contributing\n\n${projectContribution}\n\n## Tests\n\n${projectTest}\n\n## Questions\n\n${projectQuestion}`;
+let readMe = `# ${projectTitle}\n\n**License**\n\nThis application is covered under the ${projectLicense}\n\n${licenseBadge}\n\n##Table Contents\n\n${t}\n\n## Description\n\n${projectDescription}\n\n## Installation\n\n${projectInstallation}\n\n## Usage\n\n${projectUsage}\n\n## Contributing\n\n${projectContribution}\n\n## Tests\n\n${projectTest}\n\n## Questions\n\n${projectQuestion}`;
 
 //This function writes creates the "README.md" file using the contents from the readme variable
 await fs.writeFile("README.md", readMe);
 
 //   console.log("Project Title:", projectTitle);
 //   console.log("Project Description:", projectDescription);
-//   console.log("Table Contents:", tableOfContents);
+  console.log("Table Contents:", tableOfContents);
+
+const tableContent = {tableOfContents};
+
+console.log(tableContent);
+
+// tableOfContents.forEach(element => {
+//    let t = '- '+ '#' + element;
+//    console.log(t);
+// });
