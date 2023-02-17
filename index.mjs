@@ -135,6 +135,7 @@ switch (projectLicense) {
 
 let tableText = '';
 
+//This forForeach takes the tableOfContent object and loops through and prints the table contents list. 
 tableOfContents.forEach(element => {
   // t += '- '+ '#' + element;
   tableText += `- [${element}](#${element})\n`
@@ -148,6 +149,7 @@ let readMe = `# ${projectTitle}\n\n**License**\n\nThis application is covered un
 //This function writes creates the "README.md" file using the contents from the readme variable
 await fs.writeFile("README.md", readMe);
 
+//This is printed at the end of the application to let the user know they're done.
 console.log('Thank you, the application has finished :)')
 
 //   console.log("Project Title:", projectTitle);
