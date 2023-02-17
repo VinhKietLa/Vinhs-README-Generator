@@ -16,13 +16,29 @@ let {
 } = await inquirer.prompt([
   {
     type: "input",
-    message: "What is your project called??",
+    message: "What is your project called?",
     name: "projectTitle",
+    validate: (projectTitle) => {
+      if (projectTitle) {
+        return true;
+      } else {
+        console.log("Please enter a project title.");
+        return false;
+      }
+    },
   },
   {
     type: "input",
-    message: "Provide a summary of what your project is about, what it does and why it's useful.",
+    message: "Provide a summary of what your project is about?",
     name: "projectDescription",
+    validate: (projectDescription) => {
+      if (projectDescription) {
+        return true;
+      } else {
+        console.log("Please enter a project description.");
+        return false;
+      }
+    },
   },
   {
     type: "checkbox",
@@ -53,13 +69,21 @@ let {
     type: "input",
     message: "Provide instructions on how to install and set up the project.",
     name: "projectInstallation",
-    when: (name) => name.tableOfContents.includes("installation"),//Using the WHEN condition that checks if the current section was selected in the previous checkbox prompt. It will skip if it doesnt find a match.
   },
   {
     type: "input",
     message: "Explain how to use the product",
     name: "projectUsage",
-    when: (name) => name.tableOfContents.includes("usage"),
+  },
+  {
+    type: "input",
+    message: "Explain how to contribute to the project",
+    name: "projectContribution",
+  },
+  {
+    type: "input",
+    message: "Explain how to run any tests for the project",
+    name: "projectTest",
   },
   {
     type: "list",
@@ -69,21 +93,8 @@ let {
   },
   {
     type: "input",
-    message: "Explain how to contribute to the project",
-    name: "projectContribution",
-    when: (name) => name.tableOfContents.includes("contributing"),
-  },
-  {
-    type: "input",
-    message: "Explain how to run any tests for the project",
-    name: "projectTest",
-    when: (name) => name.tableOfContents.includes("tests"),
-  },
-  {
-    type: "input",
     message: "What's your Github Username?",
     name: "projectQuestionGithub",
-    when: (name) => name.tableOfContents.includes("questions"),
   },
   {
     type: 'input',
@@ -126,7 +137,6 @@ let tableText = '';
 
 tableOfContents.forEach(element => {
   // t += '- '+ '#' + element;
-  // console.log(element);
   tableText += `- [${element}](#${element})\n`
 });
 

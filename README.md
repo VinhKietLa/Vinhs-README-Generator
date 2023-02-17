@@ -1,39 +1,26 @@
-# lol
-
-**License**
-
-This application is covered under the MIT License
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-## Table Contents
-
-- [installation](#installation)
-- [usage](#usage)
-- [license](#license)
-
+# Vinhs-Pro-README-Generator
 
 ## Description
 
-lol
+This project creates a README with NodeJS, Inquirer and FS using the inputs from the user. 
 
 ## Installation
 
-dfgdfg
+To install the application you will need to:
 
-## Usage
+1. Clone the repository -> [Github respository](https://github.com/VinhKietLa/Vinhs-Pro-README-Generator)
+2. Install NodeJS v19.6.1 -> [NodeJs](https://nodejs.org/en/download/)
+3. Install Inquirier v19.6.0 -> [Inquirer](https://www.npmjs.com/package/inquirer)
+4. Use the command 'node index.mjs' to start the application.
 
-erger
+## Preview of application
 
-## Contributing
+![screenshot of application](./assets/screenshot.png)
 
-undefined
+### Technologies used
 
-## Tests
+- NodeJS 
+- Javascript
+- Inquirer
+- FS Library
 
-undefined
-
-## Questions
-
-Github Username: undefined. A direct link to my Github profile is available here [link](https://github.com/undefined)
-My email is e@live.com, feel free to drop me an email with any questions you have :)
