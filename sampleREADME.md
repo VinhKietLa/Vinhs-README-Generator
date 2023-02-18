@@ -1,4 +1,4 @@
-# VINHS SPIN THE WHEEL
+# Vinhs spin the wheel
 
 **License**
 
@@ -18,23 +18,23 @@ This application is covered under the MIT License
 
 ## Description
 
-A USER CAN SPIN THE WHEEL AND WIN A PRIZE
+It allows the user to spin a wheel and win a prize!
 
 ## Installation
 
-to install run NPM naruto
+Run NPM NARUTO 
 
 ## Usage
 
-Once installed, open index.html in live server and follow on screen instructions
+Once installed open index.html in live server and follow on screen instructions
 
 ## Contributing
 
-You can create a pull request
+You can create a PR
 
 ## Tests
 
-No tests are available right now
+No tests available right now.
 
 ## Questions
 
