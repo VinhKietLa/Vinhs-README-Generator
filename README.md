@@ -14,7 +14,7 @@ A quick guide to help you get started with the project.
 - Install Inquirer version 6.5.1
 
 ### Installation
-1. `git clone https://github.com/VinhKietLa/Vinh-s-Master-Quiz.git`
+1. `git clone https://github.com/VinhKietLa/Vinhs-README-Generator.git`
 2. Download [NodeJS v19.6.1](https://nodejs.org/en/download/releases/)
 3. `npm i inquirer@v^6.5.1`
 
